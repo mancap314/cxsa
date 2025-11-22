@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-I. -Wall -Wextra -lm -lcglm -O3 -ffast-math
+CFLAGS=-I. -Wall -Wextra -lm -lcglm -O3 -ffast-math -fopenmp
 
 %: %.c 
 	$(CC) -o $@ $< $(CFLAGS)

@@ -57,14 +57,15 @@ int main(void) {
     uint16_t h = h_ratio * factor;
     
     uint16_t max_ts = 240u;
-    char output_fp[256];
+    #pragma omp parallel for schedule(dynamic)
     for (uint16_t ts = 0; ts < max_ts; ts++) { 
         /* Open output file corresponding to current ts */
+        char output_fp[256];
         snprintf(output_fp, sizeof(output_fp), "plasma-%04u.ppm", ts);
         FILE *f = fopen(output_fp, "wb");
         if (NULL == f) {
             fprintf(stderr, "[ERROR] Could not open %s because: %s\n", output_fp, strerror(errno));
-            return EXIT_FAILURE;
+            exit(EXIT_FAILURE);
         }
         /* Preamble output file */
         fprintf(f, "P6\n"
