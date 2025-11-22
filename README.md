@@ -1,8 +1,8 @@
 # CXSA
 
-![plasma](./plasma.gif)
+![cxsa](./plasma.avif)
 
-This project implements [Xor's Shader Arsenal](https://www.xordev.com/arsenal), but in pure C. Largely inspired by [Tsoding's C++ implementation](https://gist.github.com/rexim/ef86bf70918034a5a57881456c0a0ccf) (see also his [video](https://www.youtube.com/watch?v=xNX9H_ZkfNE)). 
+This project implements [Xordev's Shader Arsenal](https://www.xordev.com/arsenal), but in pure C. Largely inspired by [Tsoding's C++ implementation](https://gist.github.com/rexim/ef86bf70918034a5a57881456c0a0ccf) (see also his [video](https://www.youtube.com/watch?v=xNX9H_ZkfNE)). 
 
 ## Dependencies
 You need to install [cglm](https://github.com/recp/cglm), used here for the vector computations. You also need [ffmpeg](https://www.ffmpeg.org/) in order to turn the generated image to videos.
